@@ -8,30 +8,35 @@ import static java.util.UUID.randomUUID;
 public class DataLoader implements CommandLineRunner
 {
     private final LocationRepository locationRepository;
-    private final RouteRepository routeRepository;
-    private final TrainRepository trainRepository;
+//    private final RouteRepository routeRepository;
+//    private final TrainRepository trainRepository;
 
-    public DataLoader(LocationRepository locationRepository,
-                      RouteRepository routeRepository,
-                      TrainRepository trainRepository)
+//    public DataLoader(LocationRepository locationRepository,
+//                      RouteRepository routeRepository,
+//                      TrainRepository trainRepository)
+//    {
+//        this.locationRepository = locationRepository;
+//        this.routeRepository = routeRepository;
+//        this.trainRepository = trainRepository;
+//    }
+
+    public DataLoader(LocationRepository locationRepository)
     {
         this.locationRepository = locationRepository;
-        this.routeRepository = routeRepository;
-        this.trainRepository = trainRepository;
     }
 
     @Override
     public void run(String... args) throws Exception
     {
-//        LocationEntity location1 = new LocationEntity("Bucuresti");
-//        LocationEntity location2 = new LocationEntity("Constanta");
-//        LocationEntity location3 = new LocationEntity("Cluj-Napoca");
-//        LocationEntity location4 = new LocationEntity("Iasi");
-//
-//        locationRepository.save(location1);
-//        locationRepository.save(location2);
-//        locationRepository.save(location3);
-//        locationRepository.save(location4);
+        LocationEntity location1 = new LocationEntity("Bucuresti");
+        LocationEntity location2 = new LocationEntity("Constanta");
+        LocationEntity location3 = new LocationEntity("Cluj-Napoca");
+        LocationEntity location4 = new LocationEntity("Iasi");
+
+        locationRepository.save(location1);
+        locationRepository.save(location2);
+        locationRepository.save(location3);
+        locationRepository.save(location4);
 //
 //        TrainEntity train1 = new TrainEntity("Clasa 40", 10);
 //        TrainEntity train2 = new TrainEntity("Clasa 41", 8);

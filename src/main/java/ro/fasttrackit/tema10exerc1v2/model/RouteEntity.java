@@ -5,8 +5,10 @@ import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Table;
 
-@Entity
+@Entity(name = "Route")
+@Table(name = "route")
 public class RouteEntity
 {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
